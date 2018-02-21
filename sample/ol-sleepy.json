@@ -5,7 +5,7 @@
     "mem": 32.0,
     "disk": 0.0,
     "maxLaunchDelaySeconds": 600,
-    "instances": 2,
+    "instances": 1,
     "container": {
       "type": "DOCKER",
       "docker": {
