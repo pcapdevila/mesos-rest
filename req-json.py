@@ -2,7 +2,7 @@ import json
 import requests
 
 app_definition = """{
-    "id": "spleepy",
+    "id": "sleepy",
     "cmd": "while true; do sleep 33 ; done",
     "cpus": 0.1,
     "mem": 32.0,
@@ -17,6 +17,7 @@ app_definition = """{
     }
 }"""
 
+url = 'http://127.0.0.1:8080/v2/'
 json_app = json.loads(app_definition)
-r = requests.post('http://127.0.0.1:8080/v2/apps', json=json_app)
-print r
+r = requests.post(url+'apps', json=json_app)
+print r.text
